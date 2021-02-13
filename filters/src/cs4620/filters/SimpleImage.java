@@ -57,8 +57,7 @@ public class SimpleImage {
      * @return the pixel value
      */    
     public byte getPixel(int ix, int iy, int c) {
-    	//TODO getPixel
-        return 0;
+        return data[c+3*(iy*width+ix)];
     }
 
     /**
@@ -70,8 +69,6 @@ public class SimpleImage {
      * @param val the new pixel value
      */
     public void setPixel(int ix, int iy, int c, byte val) {
-    	//TODO setPixel
+        data[c+3*(iy*width+ix)]=val;
     }
-
-
 }
